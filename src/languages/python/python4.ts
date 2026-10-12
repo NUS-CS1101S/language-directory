@@ -1,13 +1,5 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python4Cse: IEvaluatorDefinition = {
-    id: "python4Cse",
-    name: "Python §4",
-    path: "https://source-academy.github.io/py-slang/PyCseEvaluator4.js",
-    capabilities: [EvaluatorCapability.CSE],
-    welcome: `You have chosen the **CSE** evaluator, which runs Python §4 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
-};
-
 const python4Py2js: IEvaluatorDefinition = {
     id: "python4Py2js",
     name: "Python §4",
@@ -16,13 +8,20 @@ const python4Py2js: IEvaluatorDefinition = {
     welcome: `You have chosen the **Py2JS** evaluator, which compiles Python §4 directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
 };
 
+const python4EStepper: IEvaluatorDefinition = {
+    id: "python4EStepper",
+    name: "Python §4",
+    path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator4.js",
+    capabilities: [EvaluatorCapability.E_STEPPER],
+};
+
 export const python4Language: ILanguageDefinition = {
     id: "python4",
     name: "Python §4",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
         python4Py2js,
-        python4Cse,
+        python4EStepper,
     ],
     defaultFileExtension: "py",
     defaultProgram: "# Type your program in here!\n\n",

@@ -1,13 +1,5 @@
 import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "../../types";
 
-const python3Cse: IEvaluatorDefinition = {
-    id: "python3Cse",
-    name: "Python §3",
-    path: "https://source-academy.github.io/py-slang/PyCseEvaluator3.js",
-    capabilities: [EvaluatorCapability.CSE],
-    welcome: `You have chosen the **CSE** evaluator, which runs Python §3 using the CSE machine.\n\nThis evaluator supports all [Source Academy modules](https://source-academy.github.io/modules/documentation/).`
-};
-
 const python3Py2js: IEvaluatorDefinition = {
     id: "python3Py2js",
     name: "Python §3",
@@ -23,13 +15,20 @@ const python3Ev3: IEvaluatorDefinition = {
     capabilities: [EvaluatorCapability.EV3],
 };
 
+const python3EStepper: IEvaluatorDefinition = {
+    id: "python3EStepper",
+    name: "Python §3",
+    path: "https://source-academy.github.io/py-slang/PyEStepperEvaluator3.js",
+    capabilities: [EvaluatorCapability.E_STEPPER],
+};
+
 export const python3Language: ILanguageDefinition = {
     id: "python3",
     name: "Python §3",
     textbook: { url: "https://sicp.sourceacademy.org/json_py/", name: "SICPy", titleImageUrl: "https://source-academy.github.io/sicp/sicpy.png" },
     evaluators: [
         python3Py2js,
-        python3Cse,
+        python3EStepper,
         python3Ev3,
     ],
     defaultFileExtension: "py",
