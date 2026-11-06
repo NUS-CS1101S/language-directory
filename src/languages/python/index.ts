@@ -1,5 +1,4 @@
 import { ILanguageDefinition } from "../../types";
-import { pythonFullLanguage } from "./pythonFull";
 import { python1Language } from "./python1";
 import { python2Language } from "./python2";
 import { python3Language } from "./python3";
@@ -10,5 +9,4 @@ export const pythonLanguage: ILanguageDefinition[] = [
     python2Language,
     python3Language,
     python4Language,
-    pythonFullLanguage,
 ];
