@@ -2,7 +2,7 @@ import { EvaluatorCapability, IEvaluatorDefinition, ILanguageDefinition } from "
 
 const python4TypedPy2js: IEvaluatorDefinition = {
     id: "python4TypedPy2js",
-    name: "py2js",
+    name: "Python §4 Typed",
     path: "https://source-academy.github.io/py-slang/TypedPy2JsEvaluator4.js",
     capabilities: [],
     welcome: `You have chosen the **Py2JS** evaluator for Python §4 Typed. It checks the types of your program, and then compiles it directly to JavaScript and runs it on the browser's own JavaScript engine, rather than through an interpreter loop.\n\nA program with type errors is not run: every error is shown, with its line. You can import the [Source Academy modules](https://source-academy.github.io/modules/documentation/) \`binary_tree\`, \`curve\`, \`matrix\`, \`repeat\`, \`rune\`, \`scrabble\` and \`sound\`: their types are checked too. Other modules cannot be imported in Python §4 Typed yet.`
